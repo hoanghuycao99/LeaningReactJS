@@ -1,15 +1,21 @@
-const h2React = React.createElement(
-    'div',
-    { className: 'div-id' },
-    React.createElement('h2', { title: 'hoc' }, 'child1'),
-    React.createElement('p', null, 'child2'),
-    React.createElement(
-        'ul',
-        {},
-        React.createElement('li', {}, 'li1'),
-        React.createElement('li', {}, 'li2'),
-    )
-);
+"use strict";
+const h2React =
+    <div>
+        Học React
+        <ul>
+            <li>
+                JAVA
+            </li>
+
+            <li>
+                React
+            </li>
+
+            <li>
+                Node
+            </li>
+        </ul>
+    </div>
 
 const root = document.getElementById('root');
 

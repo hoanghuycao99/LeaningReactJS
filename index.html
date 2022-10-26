@@ -7,11 +7,47 @@
     <title>Const</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="./js/script.js" defer></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 
 <body>
     <div id="root"></div>
+
+    <script type="text/babel">
+        const subj = [
+            {
+                name: 'JAVA'
+            },
+            {
+                name: 'React'
+            },
+            {
+                name: 'NodeJS'
+            },
+        ]
+
+        function Div() {
+            return (
+                <React.Fragment>
+                    <div style={{ color: 'red' }}>Học React</div>
+                    <ul style={{ color: 'black' }}>
+                        {subj.map((cource, index) => <li key={index}>{cource.name}</li>)}
+                    </ul>
+                </React.Fragment>
+            )
+        }
+
+        function App() {
+            return <Div />
+        }
+
+
+        const root = document.getElementById('root');
+
+        const croot = ReactDOM.createRoot(root);
+
+        croot.render(<App />);
+    </script>
 </body>
 
 </html>
